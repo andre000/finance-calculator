@@ -1,0 +1,22 @@
+$font-family: 'Public Sans', sans-serif;
+$font-default-color: #444;
+
+$layer-background: 1;
+$layer-foreground: 50;
+$layer-overlay: 100;
+
+$color-background-1: #ffffff;
+$color-background-2: #fdfeff;
+
+$primary-color: #2e8ce4;
+$secondary-color: #939cac;
+
+$screen-xs: 'screen and (max-width: 480px)';
+$screen-sm: 'screen and (min-width: 480px) and (max-width: 768px)';
+$screen-md: 'screen and (min-width: 768px) and (max-width: 1024px)';
+$screen-lg: 'screen and (min-width: 1024px) and (max-width: 1200px)';
+$screen-xl: 'screen and (min-width: 1200px)';
+
+$screen-sm-below: 'screen and (max-width: 768px)';
+$screen-md-below: 'screen and (max-width: 1024px)';
+$screen-lg-below: 'screen and (max-width: 1200px)';
