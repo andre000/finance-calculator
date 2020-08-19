@@ -1,4 +1,4 @@
-<template>
+<template :key="$route.fullPath">
   <div class="index">
     <div class="index__head">
       <h1 class="index__head__title">Simulador Financeiro</h1>
@@ -7,13 +7,32 @@
       </span>
     </div>
     <div class="index__body">
-      <input-range></input-range>
+      <calc-form @submit="handleSubmit"></calc-form>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import { mapMutations } from 'vuex'
+
+export default {
+  mounted() {
+    this.SET_FORM({
+      name: '',
+      monthPayment: 0,
+      time: 0,
+    })
+
+    this.SET_TOTAL(0)
+  },
+
+  methods: {
+    handleSubmit(form) {
+      this.SET_FORM(form)
+    },
+    ...mapMutations(['SET_FORM', 'SET_TOTAL']),
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -53,8 +72,6 @@ export default {}
   &__body {
     padding: 5rem;
     grid-area: body;
-    display: flex;
-    justify-content: flex-start;
   }
 }
 
