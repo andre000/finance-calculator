@@ -56,7 +56,6 @@ export default {
 
     handleSubmit() {
       this.$emit('submit', { ...this.form })
-      this.resetForm()
     },
   },
 }
