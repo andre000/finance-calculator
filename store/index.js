@@ -35,7 +35,7 @@ export const actions = {
       method: 'POST',
       url: 'http://api.mathjs.org/v4/',
       data: {
-        expr: `${monthPayment} * (((1 + ${interest}) ^ ${time} - 1) / ${interest}`,
+        expr: `${monthPayment} * (((1 + ${interest}) ^ ${time} - 1) / ${interest})`,
       },
     })
 

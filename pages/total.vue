@@ -2,6 +2,7 @@
   <div class="total gradient-background">
     <div class="total__message">
       <h1>Total</h1>
+      {{ total }}
     </div>
     <div class="total__actions">
       <button class="button" @click="$router.push('/')">Voltar</button>
@@ -11,8 +12,10 @@
 
 <script>
 import gsap from 'gsap'
+import { mapActions, mapState } from 'vuex'
 export default {
   mounted() {
+    this.getTotal()
     gsap.fromTo(
       '.total *',
       {
@@ -22,6 +25,14 @@ export default {
         opacity: 1,
       }
     )
+  },
+
+  computed: {
+    ...mapState(['total']),
+  },
+
+  methods: {
+    ...mapActions(['getTotal']),
   },
 
   transition: {
