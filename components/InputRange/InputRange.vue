@@ -1,14 +1,37 @@
 <template>
-  <div class="range">
-    <div class="range__valor">R$ 200</div>
-    <div class="range__slider">
-      <div class="range__slider__grabber">...</div>
+  <div ref="range" class="range">
+    <div class="range__valor">{{ value }}</div>
+    <div class="range__slider" :style="{ width: `${slider}%` }">
+      <div class="range__slider__grabber" draggable="true" @drag="handleDrag">
+        ...
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data: () => ({
+    slider: 10,
+    value: 200,
+  }),
+
+  methods: {
+    handleDrag(e) {
+      if (e.clientX === 0) return false
+
+      const rangeWidth = this.$refs.range.offsetWidth
+      let pct = ((e.x - this.$refs.range.offsetLeft) / rangeWidth) * 100
+      if (pct > 100) {
+        pct = 100
+      } else if (pct < 0) {
+        pct = 0
+      }
+
+      this.slider = pct
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -29,10 +52,10 @@ export default {}
     top: calc(50% - 0.5rem);
     left: 10px;
     z-index: $layer-foreground;
+    mix-blend-mode: difference;
   }
 
   &__slider {
-    width: 33%;
     height: 3em;
     border-radius: 15px;
     background: #334;
@@ -41,10 +64,16 @@ export default {}
     &__grabber {
       position: absolute;
       font-weight: bold;
-      color: #fff;
+      color: #fffa;
       height: 3em;
       width: 5%;
       right: 0px;
+      writing-mode: vertical-lr;
+      top: calc(50% - 0.5rem);
+      right: 5px;
+      cursor: grab;
+      user-select: none;
+      z-index: $layer-foreground-2;
     }
   }
 }
