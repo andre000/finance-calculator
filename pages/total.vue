@@ -23,6 +23,10 @@ export default {
       }
     )
   },
+
+  transition: {
+    css: false,
+  },
 }
 </script>
 
