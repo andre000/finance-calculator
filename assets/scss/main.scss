@@ -6,3 +6,44 @@ body {
   color: $font-default-color;
   min-height: 100vh;
 }
+
+.input {
+  margin-top: 0.75rem;
+  width: 15rem;
+  height: 3em;
+  border-radius: 15px;
+  background: #fafafa;
+  position: relative;
+  border: none;
+  outline: none;
+  display: block;
+}
+
+input.input {
+  padding-left: 10px;
+  width: calc(15rem - 10px);
+}
+
+.button {
+  width: 15rem;
+  margin-top: 1rem;
+  height: 3em;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 5px 5px 5px -2px #00000033;
+    filter: saturate(1.5);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    filter: opacity(0.5);
+    box-shadow: none !important;
+  }
+}
