@@ -47,3 +47,47 @@ input.input {
     box-shadow: none !important;
   }
 }
+
+.gradient-background {
+  background: linear-gradient(245deg, #2e8ce4, #5ccef0, #5c8df0);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimatedBackground 30s ease infinite;
+  -moz-animation: AnimatedBackground 30s ease infinite;
+  animation: AnimatedBackground 30s ease infinite;
+}
+
+
+@-webkit-keyframes AnimatedBackground {
+  0% {
+    background-position: 0% 84%;
+  }
+  50% {
+    background-position: 100% 17%;
+  }
+  100% {
+    background-position: 0% 84%;
+  }
+}
+@-moz-keyframes AnimatedBackground {
+  0% {
+    background-position: 0% 84%;
+  }
+  50% {
+    background-position: 100% 17%;
+  }
+  100% {
+    background-position: 0% 84%;
+  }
+}
+@keyframes AnimatedBackground {
+  0% {
+    background-position: 0% 84%;
+  }
+  50% {
+    background-position: 100% 17%;
+  }
+  100% {
+    background-position: 0% 84%;
+  }
+}
