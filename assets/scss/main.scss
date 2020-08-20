@@ -17,11 +17,17 @@ body {
   border: none;
   outline: none;
   display: block;
+  @media #{$screen-xs} {
+    width: 80vw !important;
+  }
 }
 
 input.input {
   padding-left: 10px;
   width: calc(15rem - 10px);
+  @media #{$screen-xs} {
+    width: calc(80vw - 10px) !important;
+  }
 }
 
 .button {
