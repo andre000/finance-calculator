@@ -72,6 +72,9 @@ export default {
 
   &__submit {
     background: $primary-color;
+    @media #{$screen-xs} {
+      width: 80vw;
+    }
   }
 }
 </style>
