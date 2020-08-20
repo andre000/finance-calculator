@@ -128,7 +128,7 @@ export default {
   overflow: hidden;
 
   @media #{$screen-xs} {
-    overflow-y: auto;
+    overflow-y: hidden;
     grid-template-columns: 100vw;
     grid-template-rows: 4fr 6fr;
     grid-template-areas:
