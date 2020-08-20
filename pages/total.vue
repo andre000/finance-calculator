@@ -4,7 +4,7 @@
       <h1>Olá {{ form.name.length > 0 ? form.name : 'estranho' }}!</h1>
       <p>
         Juntando {{ currency(form.monthPayment) }} todo mês, você terá
-        {{ currency(total) }} em {{ form.time }} anos
+        {{ currency(total) }} em {{ form.time }} meses
       </p>
     </div>
     <div class="total__actions">
