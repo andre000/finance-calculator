@@ -33,7 +33,7 @@ export const actions = {
 
     const { data: total } = await axios({
       method: 'POST',
-      url: 'http://api.mathjs.org/v4/',
+      url: 'https://api.mathjs.org/v4/',
       data: {
         expr: `${monthPayment} * (((1 + ${interest}) ^ ${time} - 1) / ${interest})`,
       },
