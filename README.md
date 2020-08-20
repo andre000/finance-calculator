@@ -10,6 +10,8 @@
 
 > A Nuxt project with gsap transitions and input+range components
 
+### ✨ [Demo](https://finance-calculator.vercel.app/)
+
 ## Install
 
 ```sh
