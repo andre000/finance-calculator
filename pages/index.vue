@@ -41,12 +41,12 @@ export default {
       const body = document.querySelector('.index__body')
 
       const transitionEnter =
-        window.outerWidth > 480
+        window.screen.width > 480
           ? { gridTemplateColumns: '100vw 0vw' }
           : { gridTemplateRows: '100vh 0vh' }
 
       const transitionLeave =
-        window.outerWidth > 480
+        window.screen.width > 480
           ? { gridTemplateColumns: '33vw 77vw' }
           : { gridTemplateRows: '4fr 6fr' }
 
@@ -78,12 +78,12 @@ export default {
       const body = document.querySelector('.index__body')
 
       const transitionLeave =
-        window.outerWidth > 480
+        window.screen.width > 480
           ? { gridTemplateColumns: '100vw 0vw' }
           : { gridTemplateRows: '100vh 0vh' }
 
       const transitionEnter =
-        window.outerWidth > 480
+        window.screen.width > 480
           ? { gridTemplateColumns: '33vw 77vw' }
           : { gridTemplateRows: '4fr 6fr' }
 
