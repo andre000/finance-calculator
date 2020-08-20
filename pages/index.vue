@@ -50,6 +50,7 @@ export default {
           ? { gridTemplateColumns: '33vw 77vw' }
           : { gridTemplateRows: '4fr 6fr' }
 
+      document.body.style.overflow = 'hidden'
       gsap.fromTo(page, transitionEnter, {
         ...transitionLeave,
         duration: 1,
@@ -67,6 +68,7 @@ export default {
           onComplete() {
             page.classList.remove('enter')
             page.removeAttribute('style')
+            document.body.style.overflow = ''
           },
         }
       )
