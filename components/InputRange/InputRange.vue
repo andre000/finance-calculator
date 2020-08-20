@@ -17,7 +17,12 @@
         }}</span>
       </div>
       <div class="range__slider" :style="{ width: `${slider}%` }">
-        <div class="range__slider__grabber" draggable="true" @drag="handleDrag">
+        <div
+          class="range__slider__grabber"
+          draggable="true"
+          @drag="handleDrag"
+          @touchmove="handleDrag"
+        >
           ...
         </div>
       </div>
@@ -73,10 +78,11 @@ export default {
 
   methods: {
     handleDrag(e) {
-      if (e.clientX === 0) return false
+      const x = e.targetTouches ? e.targetTouches[0].clientX : e.x
+      if (!x) return false
 
       const rangeWidth = this.$refs.range.offsetWidth
-      let pct = ((e.x - this.$refs.range.offsetLeft) / rangeWidth) * 100
+      let pct = ((x - this.$refs.range.offsetLeft) / rangeWidth) * 100
       if (pct > 100 && this.stopAtLimit) {
         pct = 100
       } else if (pct < 0) {
