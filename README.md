@@ -12,6 +12,8 @@
 
 ### ✨ [Demo](https://finance-calculator.vercel.app/)
 
+### 🔎 [Input+Range Example](https://codepen.io/andre000/pen/QWNKqGM)
+
 ## Install
 
 ```sh
