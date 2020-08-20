@@ -14,14 +14,14 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Simulador Financeiro',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: 'Insira um valor mensal e o tempo de investimento',
       },
     ],
     link: [
@@ -72,4 +72,23 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+
+  loading: {
+    color: '#2e8ce4',
+  },
+
+  pwa: {
+    meta: {
+      name: 'Simulador Financeiro',
+      description: 'Insira um valor mensal e o tempo de investimento',
+      lang: 'pt',
+      twitterCreator: '@anticriativo',
+    },
+    manifest: {
+      name: 'Simulador Financeiro',
+      short_name: 'Simulador F.',
+      description: 'Insira um valor mensal e o tempo de investimento',
+      lang: 'pt',
+    },
+  },
 }
